@@ -21,7 +21,7 @@ exports.up = async function (knex) {
 exports.down = async function (knex) {
   await knex.schema.table("jobPosts", (table) => {
     table.dropColumn("urlText");
-    table.string("url").notNull();
+    table.string("url").notNull().defaultTo("banana");
     table.dropColumn("applicationDeadline");
     table.dropColumn("rating");
     table.dropColumn("description");

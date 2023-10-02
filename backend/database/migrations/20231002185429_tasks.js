@@ -17,7 +17,6 @@ exports.up = async function (knex) {
     table.boolean("completed").defaultTo(false);
   });
 };
-
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
